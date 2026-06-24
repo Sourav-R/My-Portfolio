@@ -14,6 +14,7 @@ import {
   Scale,
   Terminal,
   X,
+  Lock,
 } from "lucide-react";
 import { allProjects, projectCategories } from "../mock";
 
@@ -527,6 +528,4 @@ const ProjectCardContent = ({ project, style, getThumbnail }) => (
   </>
 );
 
-// Needs importing Lock from lucide-react if used
-import { Lock } from "lucide-react";
 export default ProjectsHub;

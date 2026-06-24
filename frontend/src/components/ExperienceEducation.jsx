@@ -15,7 +15,7 @@ import { workExperience, education } from "../labExperience";
 const highlightMetrics = (text) => {
   if (!text) return text;
   const regex =
-    /(100%|390\+|40\+|1,000\+|<60s|~40%|30\+|25%|30%|200\+|1,247|45,000|347|\b15\b|\b6\b|\b45\b|\b35\b|\b40\b|\b25\b|\b3\b|\b5\b)/g;
+    /(100%|390\+|40\+|1,000\+|<60s|~40%|30\+|25%|30%|200\+|1,247|45,000|347|\b15\b|\b45\b|\b35\b|\b40\b|\b25\b)/g;
   const parts = text.split(regex);
   return parts.map((part, i) =>
     regex.test(part) ? (

@@ -7,6 +7,8 @@ import SkillLevelingSystem from "../components/SkillLevelingSystem";
 import ActiveMissions from "../components/ActiveMissions";
 import ExperienceEducation from "../components/ExperienceEducation";
 import PowerStack from "../components/PowerStack";
+import ProjectsHub from "../components/ProjectsHub";
+import CertificationsSection from "../components/CertificationsSection";
 import Footer from "../components/Footer";
 import Canvas3DErrorBoundary from "../components/Canvas3DErrorBoundary";
 import { TerminalProvider } from "../context/TerminalContext";
@@ -96,8 +98,10 @@ const Portfolio = () => {
           <TerminalSandbox />
           <ExperienceEducation />
           <ActiveMissions />
+          <ProjectsHub />
           <PowerStack />
           <SkillLevelingSystem />
+          <CertificationsSection />
           <Footer />
         </main>
       </div>

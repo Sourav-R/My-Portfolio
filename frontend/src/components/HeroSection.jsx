@@ -336,7 +336,10 @@ const HeroSection = ({ setMatrixRed }) => {
   const handleDefconClick = useCallback(() => {
     setDefconClicks((prev) => {
       const next = prev + 1;
-      if (next >= 5) setIsDefcon1(true);
+      if (next >= 5) {
+        setIsDefcon1((d) => !d);
+        return 0;
+      }
       return next;
     });
   }, []);
@@ -570,18 +573,14 @@ const HeroSection = ({ setMatrixRed }) => {
                 <Download className="h-3.5 w-3.5" />
                 Resume
               </button>
-              <button
+              <a
                 data-testid="hero-contact-btn"
+                href={`mailto:${profileData.email}`}
                 className="flex items-center gap-2 bg-transparent hover:bg-white/5 text-gray-400 hover:text-white border border-gray-800 hover:border-gray-600 px-5 py-2.5 rounded font-mono text-xs tracking-widest uppercase transition-all duration-200"
-                onClick={() =>
-                  document
-                    .getElementById("contact")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
               >
                 <Terminal className="h-3.5 w-3.5" />
                 Contact
-              </button>
+              </a>
             </div>
 
             {/* Social links */}

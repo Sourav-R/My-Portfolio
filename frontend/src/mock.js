@@ -905,19 +905,6 @@ Security Level: SECURE
 
 All systems operational.`,
   },
-  secret: {
-    output: `Accessing classified data...
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Current Interests:
-{
-  "reading": "The Mortal Instruments",
-  "tech": "S25 Ultra Architecture",
-  "hobby": "24/7 Home Lab Tinkering",
-  "coffee_consumption": "excessive"
-}
-
-You found the easter egg! 🎯`,
-  },
   clear: {
     output: "CLEAR_TERMINAL",
   },

@@ -33,17 +33,26 @@ const Footer = () => {
             </p>
             <ul className="space-y-1.5">
               {[
-                { id: "hero", label: "./home", path: "/" },
-                { id: "lab-experience", label: "./labs", path: "/labs" },
-                { id: "terminal", label: "./vault", path: "/vault" },
+                { id: "hero", label: "./home", path: "/", scrollTo: null },
+                { id: "projects", label: "./projects", path: "/", scrollTo: "projects" },
+                { id: "lab-experience", label: "./labs", path: "/labs", scrollTo: null },
+                { id: "terminal", label: "./vault", path: "/vault", scrollTo: null },
               ].map((link) => (
                 <li key={link.id}>
                   <button
                     onClick={() => {
-                      if (
-                        window.location.pathname === "/" &&
-                        link.path === "/"
-                      ) {
+                      if (link.scrollTo) {
+                        if (window.location.pathname !== "/") {
+                          navigate("/");
+                          setTimeout(() => {
+                            document.getElementById(link.scrollTo)?.scrollIntoView({ behavior: "smooth" });
+                          }, 400);
+                        } else {
+                          document.getElementById(link.scrollTo)?.scrollIntoView({ behavior: "smooth" });
+                        }
+                        return;
+                      }
+                      if (window.location.pathname === "/" && link.path === "/") {
                         window.scrollTo({ top: 0, behavior: "smooth" });
                       } else {
                         navigate(link.path);

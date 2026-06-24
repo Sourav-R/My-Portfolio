@@ -219,8 +219,6 @@ const HELP_TEXT = `Available Commands:
 
   MISC
     resume          Open resume (PDF)
-    secret          ???
-
   NAVIGATION
     goto <section>  Jump to section (home, experience, journey, skills,
                     certs, missions, projects, labs, terminal, contact, vault)
@@ -237,7 +235,7 @@ const SECTION_MAP = {
   certs: { id: "certifications" },
   certifications: { id: "certifications" },
   missions: { id: "active-missions" },
-  projects: { route: "/labs", id: "projects" },
+  projects: { id: "projects" },
   labs: { route: "/labs", id: "lab-experience" },
   casestudies: { route: "/labs", id: "lab-experience" },
   terminal: { id: "terminal" },
@@ -444,12 +442,6 @@ const TerminalSandbox = () => {
     if (lower === "resume") {
       addOutput("output", "Opening resume in new tab...");
       window.open(profileData.resumeUrl, "_blank");
-      return;
-    }
-
-    // Secret
-    if (lower === "secret") {
-      addOutput("output", terminalCommands.secret.output);
       return;
     }
 
