@@ -1,7 +1,7 @@
 // Mock data for SOC-Professional Portfolio
 
 export const profileData = {
-  name: "Sourav ",
+  name: "Sourav Ramakrishna",
   role: "Security Engineer",
   company: "ThIRU Labs",
   companyFull: "THIRU (Threat Incident and Response Unit)",
